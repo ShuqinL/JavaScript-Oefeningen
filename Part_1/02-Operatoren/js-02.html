@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Oefeningen</title>
+
+</head>
+<body>
+  
+    <script>
+      // oefening 1
+      var n = 2;
+      var x = "leraar";
+      var y = "Frankrijk";
+      var z = "Sophie"; 
+      document.write('U wordt '+x+ " en woont in "+y+ " , en bent getrouwd met "+z+ " met "+n+" kinderen.<br><br>") ;
+
+      // oefening 2
+      var thisYear = 2019;
+      var birthYear = 1964;
+      document.write("Your age is: "+ (thisYear-birthYear)+".<br><br>");
+
+      //oefening 3
+      var age=30;
+      var lifetime=100;
+      document.write("Je hebt nog steeds "+ (lifetime-age)+" jaar voordat je de leeftijd van "+lifetime+" jaar bereikt hebt.<br><br>");
+
+      //oefening 4
+      let resultaat = (1 + 2) * 3 + 4 / 2;
+      document.write(resultaat+"<br>");
+      document.write("Stap 1: 1+2=3;<br>"+
+                     "Stap 2: 3*3=9;<br>"+
+                     "Stap 3: 4/2=2;<br>"+
+                     "Stap 4: 9+2=11.<br>");
+      
+      //oefeningen: vergelijkingen
+      //1.Talen
+      var languages=["fr","nl","en"];
+      //var messages=["Bonjour tout le monde", "Hallo iedereen","Hello world"];
+      var hello =function (languages){
+        if (languages==="fr"){
+        document.write("Bonjour tout le monde") ;
+      } else if (languages==="nl"){
+        document.write("Hallo iedereen");
+      } else {
+        document.write("Hello world");
+      }
+      };
+      document.write("<br><br>");
+      hello("fr");
+      document.write("<br>");
+      hello("nl");
+      document.write("<br>");
+      hello("en");
+
+      //2.Scores weergeven
+      var score;
+      var result=function(score){
+      if (score>=90){
+         document.write("A");
+      } else if(score<90 && score>50){
+        document.write("B");
+      } else {
+        document.write("C");
+      }
+      };
+      document.write("<br><br>");
+      result(78);
+
+  
+      //3.In het meervoud
+      var word = "tas";
+      var number;
+      var phrase = function(number){
+          if (number>1){
+              document.write("Ik heb "+number+" tassen.");
+          } else {
+              document.write("Ik heb "+number+" tas.");
+          }
+      };
+
+      document.write("<br><br>");
+      phrase(5);
+      </script>
+</body>
+</html>
