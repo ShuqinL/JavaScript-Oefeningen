@@ -2,42 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>Oefeningen 05</title>
+    <title>Oefeningen 06</title>
 
 </head>
 <body>
   
     <script>
-      // Optellen
-      var numbers=[1, 2, 3, 3, 4, 5, 6, 7, 8, 9];
-        document.write(numbers.reduce((a,b)=>a+b,0));
-   
-     
+      // Max & Min
+      var a=Math.min(7, 5, -12, 6, 32, 18, 14, -2);
+       document.write(a);
+       document.write("<br>");
+       var b=Math.max(-3, 9, 21, 36, 27, 54, 17, 35);
+       document.write(b);
+       document.write("<br>");
+       document.write(a+b);
        document.write("<br><br>");
-        
-       //how to make different arrays with a for loop:
-       /*let arrays = [];
+       
+      //Willekeurig 1
+      var floatSpeed=10.4;
+      var lowSpeed=Math.floor(floatSpeed);
+      var highSpeed=Math.ceil(floatSpeed);
+      document.write(lowSpeed+"<br>");
+      document.write(highSpeed);
+      document.write("<br><br>");
 
-       for(let i = 1; i < numbers.length; i++){
-           arrays.push(numbers.slice(0, i));
-       };
+      //Willekeurig 2
+      document.write(100-(Math.random(50,100)*50)+"<br>");
+      document.write(Math.random()+"<br>");
+      document.write(Math.random()*10);
 
-       console.log(arrays);*/
+      document.write("<br><br>");
 
+      //Willekeurig 3
+       var array=["Goro", "Johnny Cago", "Kano", "Liu Kano", "Raiden", "Raptile", "Scorpion", "Shang Tsun", "Sonya", "Sub-Zero"];
+       var i=Math.round(Math.random()*10);
+       document.write(array[i-1]);
 
-      //De beste keuze
-       var actors=["Hugh Jackman","Eddie Redmayne","Benedict Cumberbatch"];
-       for (var i=1;i<=3;i++){
-          document.write("Nummer "+i+" is "+actors[i-1]);
-          document.write("<br>");
-     }
        document.write("<br><br>");
 
 
-       //Klonen
-       var namens=["Mario", "Luigi", "Peach"];
-       namens.push("Bowser");
-       document.write(namens);
+      
 
      
 
