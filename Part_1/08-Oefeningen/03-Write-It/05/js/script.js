@@ -35,12 +35,69 @@ const extras = [
 
 
 
+//make an array for each fee
+const normal = Array.of(fees[0])
+const discount = Array.of(fees[1])
+const student = Array.of(fees[2])
+//console.log(normal);
+
+//tagWrapper
+const tagWrapper = (content, tagname) => `<${tagname}>${content}</${tagname}>`
+
+//add extras to every array and add price to fee.price
+ const addExtra = arr => {
+    //  voor elk object in array een li tag maken
+    // write to html
+    arr.forEach(fee => {
+        document.write (tagWrapper(
+            (tagWrapper(
+                (`${fee.title}`),
+                'p')
+            + tagWrapper((`€ ${fee.price}`),
+                'p')
+            ), 
+            'li')
+        )
+        
+        //voor elke extra de prijs aanpassen (extra.price + fee.price)
+        //elke extra verpakken in li tag
+        extras.forEach(extra => {
+            let price = fee.price + extra.price
+            document.write (tagWrapper(
+                (tagWrapper(
+                    (`${extra.title}`),
+                    'p')
+                + tagWrapper(
+                    (`€ ${price}`),
+                    'p')
+                ),
+                'li')
+            )
+        })
+    })
+}
+
+//maak ul voor elk tarief en schrijf naar html 
+document.write('<ul>')
+addExtra(normal)
+document.write('</ul>')
+document.write('<ul>')
+addExtra(discount)
+document.write('</ul>')
+document.write('<ul>')
+addExtra(student)
+document.write('</ul>')
 
 
 
 
+// li met p tags voor mooiere uitlijning
+//tagWrapper((tagWrapper((`${extra.title}`),'p')tagWrapper((`${price}`),'p')), 'li')
 
-for(var i=0;i<fees.length;i++){
+//li zonder p tags voor eenvoud
+// document.write(tagWrapper((`${extra.title}: ${price}`),'li'))
+
+/*for(var i=0;i<fees.length;i++){
    
   
    extras.forEach(function(extra){
@@ -50,3 +107,4 @@ for(var i=0;i<fees.length;i++){
  
 
 };
+*/
