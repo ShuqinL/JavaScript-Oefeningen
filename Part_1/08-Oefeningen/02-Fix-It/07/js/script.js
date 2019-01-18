@@ -71,16 +71,13 @@ const topScoreFilter = show => {
     };
 
 
-
-
-
-
 //shows.filter(topScoreFilter);
 
 
 
 
 document.write(`<ol>`);
-shows.filter(topScoreFilter).forEach(show => document.write(wrapWithTag(show.title +  '('+ show.score + '% )',`li`)));
+shows.filter(topScoreFilter).forEach(show => 
+  document.write(wrapWithTag(show.title +  '('+ show.score + '% )',`li`)));
 
 document.write(`</ol>`);

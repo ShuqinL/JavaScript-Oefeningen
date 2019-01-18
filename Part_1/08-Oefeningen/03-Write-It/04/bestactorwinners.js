@@ -1,4 +1,4 @@
-var actors=[
+var winners=[
   {
     actor: "Forest Whitaker",
     film: "The Last King of Scotland",
@@ -47,5 +47,15 @@ var actors=[
 
 const wrapWithTag = (content, tagname) => `<${tagname}>${content}</${tagname}>`;
 
-var words= actors.actor.split('');
-document.write(words[1]);
+var list=[];
+winners.forEach(function(winner){
+    var names=winner.actor.split(' ');
+    list.push(names[1]+"<br>");    
+   });
+
+list.sort();
+
+document.write(`<ol>`);
+document.write(wrapWithTag(list,`li`));
+document.write(`</ol>`);
+

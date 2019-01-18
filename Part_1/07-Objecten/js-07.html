@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Oefeningen 07</title>
+
+</head>
+<body>
+  
+    <script>
+      // Non-player character
+      var character={
+          name:"Jenny",
+          age:57,
+          items_to_give:["T-shirts","books","an old table","two chairs"]   
+      }
+      document.write(character.name+"<br>");
+      document.write(character.age+"<br>");
+      document.write(character.items_to_give+"<br>");
+      character.giveItem=function(){
+              var i=Math.round(Math.random()*4);
+              document.write(this.items_to_give[i-1]);
+          };
+      character.giveItem();
+
+       document.write("<br><br>");
+
+       
+      //Shop
+      var things=[
+          {title:"zwaard",
+           physic:8,
+           magic:6,
+           minLevel:14,
+           available:true},
+
+           {title:"bijl",
+           physic:5,
+           magic:4,
+           minLevel:9,
+           available:true},
+
+           {title:"scepter",
+           physic:5,
+           magic:10,
+           minLevel:15,
+           available:false}];
+
+         //Maak een functie om alle objecten weer te geven
+
+           things.forEach(thing=>document.write(thing.title+"<br>"));
+
+           document.write("<br><br>");
+
+        //Maak een functie om de beschikbare objecten weer te geven
+   
+           things.forEach(function(thing){
+               if (thing.available===true){
+                   document.write(thing.title+"<br>");
+               };
+           });
+          
+           document.write("<br><br>");
+        
+        //Maak een functie om objecten met een minimumniveau van 10 weer te geven
+        
+        things.forEach(function(thing){
+               if (thing.minLevel>=10){
+                   document.write(thing.title+"<br>");
+               };
+           });
+          
+           document.write("<br><br>");
+
+     
+      //Character
+     var mainCharacter={
+         name:"Mars",
+         level:9,
+         life:8,
+         weapon:{
+             name:"zwaard",
+             damage:8
+         },
+         attack:function(){
+             document.write(this.name +" aanval met het wapen "+this.weapon.name+" de schade is "+this.weapon.damage*this.level+ ".");
+         }
+     };
+
+     
+     mainCharacter.attack();
+
+     document.write("<br><br>");
+
+
+
+      
+
+
+      
+
+     
+
+
+      </script>
+</body>
+</html>

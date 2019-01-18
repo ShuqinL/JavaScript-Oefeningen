@@ -32,3 +32,21 @@ const extras = [
     title : "Supplement Atmos"
   }
 ];
+
+
+
+
+
+
+
+
+for(var i=0;i<fees.length;i++){
+   
+  
+   extras.forEach(function(extra){
+     extra.price+fees[i].price;
+   }
+    );
+ 
+
+};
