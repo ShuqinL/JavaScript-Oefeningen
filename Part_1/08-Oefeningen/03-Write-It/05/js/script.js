@@ -39,7 +39,6 @@ const extras = [
 const normal = Array.of(fees[0])
 const discount = Array.of(fees[1])
 const student = Array.of(fees[2])
-//console.log(normal);
 
 //tagWrapper
 const tagWrapper = (content, tagname) => `<${tagname}>${content}</${tagname}>`
