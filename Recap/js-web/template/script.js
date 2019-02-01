@@ -11,5 +11,23 @@ import "./style.scss";
 /*
   Put the JavaScript code you want below.
 */
+//1.1 Color selector
+//add style to the div
+document.getElementById("square").setAttribute("style","height:50px;width:50px;background-color:black;");
+//changecolor function
+//let color;
+function changecolor(color){
+  document.getElementById(color).addEventListener("click",colorButton);
+  function colorButton(){
+    document.getElementById("square").style.backgroundColor = color;
+  }
+} 
 
-console.log("Hey look in your browser console. It works!");
+changecolor("blue");
+changecolor("red");
+changecolor("green");
+
+//1.2 Calculator
+
+
+
