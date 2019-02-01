@@ -75,4 +75,11 @@ function displayButton(){
   document.getElementById("formResult").innerHTML="My super vilain name is "+name+". I have the following super power: "+power+". My motivation is "+motivation+". And I have a secret plan to conquer the world: "+plan+".";
 }
 
+//1.4 Age calculator
+
+document.getElementById("calcAge").addEventListener("click",function calcYourAge(){
+let birthYear=new Number(document.getElementById("year").value);
+  let age=2019-birthYear;
+  document.getElementById("displayAge").innerHTML="Your age is "+age;
+});
 
