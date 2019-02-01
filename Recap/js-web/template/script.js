@@ -55,5 +55,24 @@ calcResult("multiply");
 calcResult("division"); 
 
 
-//
+//1.3 Super Vilain application form
+//reset function
+document.getElementById("resetBtn").addEventListener("click",resetButton);
+function resetButton(){
+  document.getElementById("myForm").reset();
+}
+//display function
+document.getElementById("displayBtn").addEventListener("click",displayButton);
+function displayButton(){
+  //get the value
+  let name=document.getElementById("name").value;
+  let power=document.getElementById("power").value;
+  let motivation=document.getElementById("motivation").value;
+  let plan=document.getElementById("plan").value;
+  //display none
+  document.getElementById("myForm").style.display="none";
+  //show the form content
+  document.getElementById("formResult").innerHTML="My super vilain name is "+name+". I have the following super power: "+power+". My motivation is "+motivation+". And I have a secret plan to conquer the world: "+plan+".";
+}
+
 
