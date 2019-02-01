@@ -28,6 +28,32 @@ changecolor("red");
 changecolor("green");
 
 //1.2 Calculator
+let result=document.getElementById("result");
+
+ function calcResult(arith){
+  document.getElementById(arith).addEventListener("click", getAnswer);
+  
+  function getAnswer(){
+      let num1=new Number(document.getElementById("text1").value);
+      let num2=new Number(document.getElementById("text2").value);
+
+      if(arith=="add"){
+        result.innerText=num1 + num2;
+      } else if(arith=="subtract"){
+        result.innerText=num1-num2;
+      } else if(arith=="multiply"){
+        result.innerText=num1*num2;
+      } else if(arith=="division"){
+        result.innerText=num1/num2;
+      }  
+  }
+}
+
+calcResult("add");
+calcResult("subtract");
+calcResult("multiply");
+calcResult("division"); 
 
 
+//
 
